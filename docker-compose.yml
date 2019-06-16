@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  tensorflow:
+    build: docker/tensorflow
+    user: "${UID}:${GID}"
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/app
