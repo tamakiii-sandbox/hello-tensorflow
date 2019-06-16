@@ -2,6 +2,6 @@
 {
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "tensorflow",
-	"workspaceFolder": "/",
+	"workspaceFolder": "/tf",
 	"extensions": []
 }
