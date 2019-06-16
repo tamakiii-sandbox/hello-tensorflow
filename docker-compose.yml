@@ -2,8 +2,17 @@ version: '3.7'
 services:
   tensorflow:
     build: docker/tensorflow
-    user: "${UID}:${GID}"
+    # user: "${UID}:${GID}"
     ports:
       - 8888:8888
     volumes:
-      - .:/app
+      - .:/tf
+
+  tensorboard:
+    build: docker/tensorflow
+    # user: "${UID}:${GID}"
+    entrypoint: tensorboard --logdir /var/log
+    ports:
+      - 6006:6006
+    volumes:
+      - .:/tf
